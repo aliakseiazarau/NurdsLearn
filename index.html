@@ -3,102 +3,86 @@
 <head>
 	<meta charset="utf-8">
 	<title>Nёrds</title>
+	<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 	<header class="main-header">
-		<nav class="main-header-nav">
-			<a class="main-header-logo">
-			  <img src="#" alt="Логотип студии дизайна Nёrds">
-			</a>
-			<ul>
-				<li>
-					<a href="#">Студия</a>
-				</li>
-				<li>
-					<a href="#">Клиенты</a>
-				</li>
-				<li>
-					<a href="#">Магазин</a>
-				</li>
-				<li>
-					<a href="#">Контакты</a>
-				</li>
-			</ul>
-			<a class="main-header-cart" href="#">
-				::before
-				"Корзина"
-			</a>
-		</nav>	
+		<div class="container">
+			<nav class="main-header-nav">
+				<a class="main-header-logo">
+					<img src="#" alt="Логотип студии дизайна Nёrds">
+				</a>
+				<ul>
+					<li>
+						<a href="#">Студия</a>
+					</li>
+					<li>
+						<a href="#">Клиенты</a>
+					</li>
+					<li>
+						<a href="#">Магазин</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<a class="main-header-cart" href="#">Корзина</a>
+			</nav>
+		</div>		
 	</header>
 	
 	<main>
 		<section class="slider">
-			<h1 class="visually-hidden">Студия веб-дизайна Nёrds</h1>
-			<input type="radio" name="slider" id="slider1" checked="checked">
-			<input type="radio" name="slider" id="slider2">
-			<input type="radio" name="slider" id="slider3" >
-			<div class="slides">
-  			<div class="slide slide1"></div>
-  			<div class="slide slide2"></div>
-  			<div class="slide slide3"></div>
-			</div>
-			<div class="slider-controls">
-  			<label class="slider-control" for="slider1"></label>
-  			<label class="slider-control" for="slider2"></label>
-  			<label class="slider-control" for="slider3"></label>
-			</div>
-
-
-			<input type="radio" name="slider" id="slider1" checked="checked">
-			<label for="slider1"></label>
-				<div>
-					<p>Долго, дорого, скрупулёзно.</p>
-					<p>Математически выверенный дизайн для вашего сайта или приложения.</p>
-					<a href ="#"></a>
-					<img src="#">
+			<div class="container">
+				<h1 class="visually-hidden">Студия веб-дизайна Nёrds</h1>
+				<input type="radio" name="slider" id="slider1" checked="checked">
+				<input type="radio" name="slider" id="slider2">
+				<input type="radio" name="slider" id="slider3" >
+				<div class="slides">
+					<div class="slide slide1">	
+						<h2>Долго, дорого, скрупулёзно!</h2>
+						<p>Математически выверенный дизайн для вашего сайта или приложения.</p>
+						<a class="button" href ="#">Узнать больше</a>
+					</div>
+					<div class="slide slide2">
+						<h2>Только наркотики,только хардкор!</h2>
+						<p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов.</p>
+						<a class="button" href ="#">Узнать больше</a>
+					</div>
+					<div class="slide slide3">
+						<h2>Любите ли вы математику, как любим её мы?</h2>
+						<p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать.</p>
+						<a class="button" href ="#">Узнать больше</a>
+					</div>
 				</div>
-			<label for="slider2"></label>
-			<input type="radio" name="slider" id="slider2">	
-			<label for="slider2"></label>
-				<div>
-					<p>Только наркотики,только хардкор!</p>
-					<p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов.</p>
-					<a href ="#"></a>
-					<img src="#">
+				<div class="slider-controls">
+					<label class="slider-control" for="slider1"></label>
+					<label class="slider-control" for="slider2"></label>
+					<label class="slider-control" for="slider3"></label>
 				</div>
-			<label for="slider3"></label>
-			<input type="radio" name="slider" id="slider3">
-			<label for="slider3"></label>
-				<div>
-					<p>Любите ли вы математику, как любим её мы?</p>
-					<p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать.</p>
-					<a href ="#"></a>
-					<img src="#">
-				</div>	
-				<label for="slider4"></label>
-		</section>
+			</div>		
 
 		<section class="advantages">
-			<div>
-        <h2 class="visually-hidden">Наши преимущества</h2>
-				<ul>
-					<li> 
+			<h2 class="visually-hidden">Наши преимущества</h2>
+			<div class="container">
+				<ul class="davantages-main">
+					<li class="davantages-item"> 
 						<img src="#">
 						<h3>Веб-сайты</h3>
 						<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-						<a class="advantages-button-left" href="#">Заказать</a>
-						</li>
-					<li> 
+						<a class="button adv-button-red" href="#">Заказать</a>
+					</li>
+					<li class="davantages-item"> 
 						<img src="#">
 						<h3>Приложения</h3>
 						<p>Покорите топ-10 приложений в AppStrore и Google Play</p>
-						<a class="advantages-button-center" href="#">Заказать</a>
+						<a class="button adv-button-green" href="#">Заказать</a>
 					</li>
-					<li> 
+					<li class="davantages-item"> 
 						<img src="#">
 						<h3>Презентации</h3>
 						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
-						<a class="advantages-button-right" href="#">Заказать</a>
+						<a class="button adv-button-yellow" href="#">Заказать</a>
 					</li>
 				</ul>
 			</div>			
