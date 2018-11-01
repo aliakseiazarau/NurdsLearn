@@ -90,34 +90,36 @@
 
 		<section class="studio">	
 			<div class="container">
-				<div class="studio-main">
-					<h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
-					<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не покладая рук, как роботы.</p>
-					<h4>Выполняем заказы на разработку:</h4>
-					<ul class="studio-main-info">
-						<li class="studio-main-info-item">Вебсайтов любой сложности</li>
-						<li class="studio-main-info-item">Мобильных приложений для iOS и Android</li>
-						<li class="studio-main-info-item">Слайдшоу и видео для корпоративных презентаций</li>
-					</ul>
+				<div class="studio-display-inner">
+					<div class="studio-main">
+						<h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
+						<p>Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не покладая рук, как роботы.</p>
+						<h4>Выполняем заказы на разработку:</h4>
+						<ul class="studio-main-info">
+							<li class="studio-main-info-item">Вебсайтов любой сложности</li>
+							<li class="studio-main-info-item">Мобильных приложений для iOS и Android</li>
+							<li class="studio-main-info-item">Слайдшоу и видео для корпоративных презентаций</li>
+						</ul>
+					</div>	
+					<div class="studio-image">
+						<img src="#">
+						<h4>С 2004 года любим точность во всём:</h4>
+						<ul class="studio-image-info">
+							<li class="studio-image-info-item">
+								<span>146<sup>%</sup></span>
+								<p>Уровень самоотдачи</p>
+							</li>
+							<li class="studio-image-info-item">
+								<span>100<sup>%</sup></span>
+								<p>Соблюдение сроков</p>
+							</li>
+							<li class="studio-image-info-item">
+								<span>50<sup>%</sup></span>
+								<p>Минимальная предоплата</p>
+							</li>
+						</ul>
+					</div>
 				</div>	
-				<div class="studio-image">
-					<img src="#">
-					<h4>С 2004 года любим точность во всём:</h4>
-					<ul class="studio-image-info">
-						<li class="studio-image-info-item">
-							<p>146%</p>
-							<p>Уровень самоотдачи</p>
-						</li>
-						<li class="studio-image-info-item">
-							<p>100%</p>
-							<p>Соблюдение сроков</p>
-						</li>
-						<li class="studio-image-info-item">
-							<p>50%</p>
-							<p>Минимальная предоплата</p>
-						</li>
-					</ul>
-				</div>
 				<div class="studio-partners">
 					<ul clss="std-partners-logo">
 						<li>
@@ -150,57 +152,61 @@
 				<div class="contacts-info">
 					<h4>NЁRDS DESIGN STUDIO</h4>
 					<p class="cnt-info-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д.19.8</p>
-					<p class="cnt-info-phone">тел. +7(812)275-75-75</p>
+					<p class="cnt-info-phone"> тел. <a href="tel:+78122757575">+7(812)275-75-75</a></p>
 					<a class="button contact-info-btn" href="#">Напишите нам</a>
 				</div>
 			</div>
 		</section>
 
-		<!-- Это модалка, которая вызывается из секции с контактами-->
 
-		<div class="modal">
-			<h2 class="modal-title">Напишите нам</h2>
-			<form class="moda-form" action="index.html" method="post" id="form">
-				<div class="form-inputs">
-					<div class="form-input-item">
-						<label>Ваше имя:</label>
-						<input type="text" name="name" placeholder="Имя Фамилия" />
-					</div>
-					<div class="form-input-item">
-						<label>Ваш e-mail:</label>
-						<input type="email" name="email" placeholder="email@example.com" />
-					</div>
-				</div>
-				<div class="form-textarea">
-					<label>Текст письма:</label>
-					<textarea rows="3" name ="message" placeholder="В Свободной форме"></textarea>
-				</div>
-				<div class="button form-button">
-					<button type="submit" name="button">Отправить</button>
-				</div>	
-			</form>
-		</div>	
 	</main>
 
 	<footer class="footer">
 		<div class="container">
-			<div class="footer-social">
-				<a class="footer-social-" href="#">
-					<img scr="#" alt="Логотип VK">
-				</a>
-				<a class="footer-social-item" href="#">
-					<img scr="#" alt="Логотип Facebook">
-				</a>
-				<a class="footer-social-item" href="#">
-					<img scr="#" alt="Логотип Instagram">
-				</a>
+			<div class="footer-display-inner">
+				<div class="footer-social">
+					<a class="footer-social-item" href="#">
+						Логотип Вконтакте
+					</a>
+					<a class="footer-social-item" href="#">
+						Логотип Facebook
+					</a>
+					<a class="footer-social-item" href="#">
+						Логотип Instagram
+					</a>
+				</div>
+				<div class="footer-text">
+					<h3>Давайте дружить, это выгодно!</h3>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
+				</div>
 			</div>
-			<div class="footer-text">
-				<h3>Давайте дружить, это выгодно!</h3>
-				<p>Скидка 10% для друзей из социальных сетей.</p>
-			</div>
-		</div>
+		</div>	
 	</footer>
+
+		<!-- Это модалка, которая вызывается из секции с контактами-->
+
+	<div class="modal">
+		<h2 class="modal-title">Напишите нам</h2>
+		<form class="moda-form" action="index.html" method="post" id="form">
+			<div class="form-inputs">
+				<div class="form-input-item">
+					<label for="name">Ваше имя:</label>
+					<input type="text" id="name" name="name" placeholder="Имя Фамилия" />
+				</div>
+				<div class="form-input-item">
+					<label for="email">Ваш e-mail:</label>
+					<input type="email" id="email" name="email" placeholder="email@example.com" />
+				</div>
+			</div>
+			<div class="form-textarea">
+				<label for="message-text">Текст письма:</label>
+				<textarea rows="3" id="message-text" name ="message" placeholder="В Свободной форме"></textarea>
+			</div>
+			<div class="button form-button">
+				<button type="submit" name="button">Отправить</button>
+			</div>	
+		</form>
+	</div>	
 </body>
 </html>
 
