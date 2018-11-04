@@ -34,13 +34,93 @@
 	<main class="container">
 		<h1 class="catalog-title">Магазин готовых шаблонов</h1>
 
-		<section class="filters">
-			<h2 class="visually-hidden">Фильтр товаров</h2>
-			<!-- В видео по разметке каталога написано, что позже здесь будет форма) --> 
+		<section class="filter-price">
+			<h2 class="visually-hidden">Фильтр типов сайтов</h2>
+			<form class="catalog-filter" method="get" action="#" id="filter-form">
+				<fieldset>
+					<legend>Стоимость:</legend>
+				</fieldset>
+				<fieldset>
+					<legend>Сетка:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="filter-input flt-input-radio" type="radio" name="filter-sites-radio" value="adaptive" id="filter-adaptive" checked>
+							<label for="filter-adaptive">Адаптивная</label> 
+						</li>
+						<li class="filter-option">
+							<input class="filter-input flt-input-radio" type="radio" name="filter-sites-radio" value="fixed" id="filter-fixed">
+							<label for="filter-fixed">Фиксированная</label> 
+						</li>
+						<li class="filter-option">
+							<input class="filter-input flt-input-radio" type="radio" name="filter-sites-radio" value="rubber" id="filter-rubber">
+							<label for="filter-rubber">Резиновая</label> 
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Особенности:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked="checked">
+							<label for="filter-slider">Слайдер</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-checkbox" type="checkbox" name="block-advatages" id="filter-advantages">
+							<label for="filter-advantages">Блок преимуществ</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked="checked">
+							<label for="filter-news">Новости</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
+							<label for="filter-gallery">Галерея</label>
+						</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-checkbox" type="checkbox" name="cart" id="filter-cart">
+							<label for="filter-cart">Корзина</label>
+						</li>
+					</ul>
+				</fieldset>
+				<button type="submit" class="button filter-button">Показать</button>
+			</form>
 		</section>
 
 		<section class="catalog">
 			<h2 class="visually-hidden">Список сайтов</h2>
+			<form class="catalog-sort" method="get" action="#" id="sort-form">
+				<fieldset>
+					<legend>Сортировать:</legend>
+					<ul>
+						<li class="sort-option">
+							<input class="sort-input" type="radio" name="sort-sites" value="price" id="sort-price"checked="checked">
+							<label for="sort-price">По цене</label> 
+						</li>
+						<li class="sort-option">
+							<input class="sort-input" type="radio" name="sort-sites" value="type" id="sort-type">
+							<label for="sort-type">По типу</label> 
+						</li>
+						<li class="sort-option">
+							<input class="sort-input" type="radio" name="sort-sites" value="name" id="sort-name">
+							<label for="sort-name">По названию</label> 
+						</li>
+					</ul>
+					<ul>
+						<li class="sort-order">
+							<input class="order-input" type="radio" name="sort-order" id="sort-descending" checked="checked">
+							<label for="sort-descending">
+								<img src="img/icon-down-dir.svg">
+							</label> 
+						</li>
+						<li class="sort-order">
+							<input class="order-input" type="radio" name="sort-order" id="sort-ascending">
+							<label for="sort-ascending">
+								<img src="img/icon-up-dir.svg">
+							</label> 
+						</li>
+					</ul>
+				</fieldset>
+			</form>
 			<ul class="catalog-list">
 				<li class="catalog-item">
 					<div class="catalog-item-info">
