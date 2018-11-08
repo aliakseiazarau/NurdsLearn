@@ -43,12 +43,12 @@
 					<div class="filter-price">
 						<div class="filter-min"></div>
 						<div class="filter-max"></div>
-						<div class="filter-inputs">
-							<label for="">От</label>
-							<input class="filter-field" type="text" name="filter-field-min" id="filter-field-min" placeholder="0">
-							<label for="">До</label>
-							<input class="filter-field" type="text" name="filter-field-max" id="filter-field-max" placeholder="15 000">
-						</div>
+					</div>
+					<div class="filter-inputs">
+						<label for="">От</label>
+						<input class="filter-field" type="text" name="filter-field-min" id="filter-field-min" placeholder="0">
+						<label for="">До</label>
+						<input class="filter-field" type="text" name="filter-field-max" id="filter-field-max" placeholder="15 000">
 					</div>
 				</fieldset>
 				<fieldset>
@@ -103,13 +103,13 @@
 				<fieldset>
 					<legend>Сортировать:</legend>
 					<div class="sort-sites">
-						<a href="#">По цене</a>
+						<a class="active" href="#">По цене</a>
 						<a href="#">По типу</a>
 						<a href="#">По названию</a>
 					</div>
 					<div class="sort-order">
-						<a href="#"></a>
-						<a href="#"></a>
+						<a class="sort-desc active"href="#">По возрастанию</a>
+						<a class="sort-asc" href="#">По убыванию</a>
 					</div>	
 				</fieldset>
 			</form>
@@ -187,11 +187,11 @@
 					</p>
 				</li>
 			</ul>
-			<ul class="catalog-pagination-list">
-				<li class="ctlg-pagination-item pgn-item-current"><a>1</a></li>
-				<li class="ctlg-pagination-item"><a href="#">2</a></li>
-				<li class="ctlg-pagination-item"><a href="#">3</a></li>
-				<li class="ctlg-pagination-item"><a href="#">Следующая</a></li>
+			<ul class="pagination">
+				<li class="pagination-item active"><a>1</a></li>
+				<li class="pagination-item"><a href="#">2</a></li>
+				<li class="pagination-item"><a href="#">3</a></li>
+				<li class="pagination-item"><a href="#">Следующая</a></li>
 			</ul>
 		</section>
 
