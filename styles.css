@@ -30,17 +30,37 @@ ul {
 .main-header-nav {
 	display: flex;
 	align-items: center;
+	padding: auto;
 }
 
 .main-header-nav ul {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
 }
 
 .header-item {
 	display: flex;
+	justify-content: center;
+	padding: 0 24px;;
+}
+
+.main-header-cart {
 }
 
 .advantages-main {
 	display: flex;
 	align-items: center;
+	margin: 0 auto;
+	padding: 0 0;
+}
+
+.slider {
+	display: flex;
+	align-items: center;
+}
+
+.slide {
+	width: 376px;
 }
