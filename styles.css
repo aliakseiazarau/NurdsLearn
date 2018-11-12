@@ -1,6 +1,46 @@
-label {
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background: #000;
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px; 
+	width: 1px; 
+	overflow: hidden;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.main-header-nav {
+	display: flex;
+	align-items: center;
+}
+
+.main-header-nav ul {
+	display: flex;
+}
+
+.header-item {
+	display: flex;
+}
+
+.advantages-main {
+	display: flex;
+	align-items: center;
 }
