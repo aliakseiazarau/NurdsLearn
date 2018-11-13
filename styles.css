@@ -5,6 +5,10 @@ html {
 	box-sizing: border-box;
 }
 
+body, h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
 .visually-hidden {
 	position: absolute;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -27,52 +31,169 @@ ul {
 	padding: 0;
 }
 
+.main-header-bg {
+	background-color: #eeeeee;
+}
+
 .main-header-nav {
 	display: flex;
 	align-items: center;
-<<<<<<< HEAD
-=======
 	padding: auto;
->>>>>>> da847c4de9568703fb4d5f988c11f67d5eeab9ae
 }
 
 .main-header-nav ul {
 	display: flex;
-<<<<<<< HEAD
-=======
 	justify-content: center;
 	align-items: center;
 	margin: auto;
->>>>>>> da847c4de9568703fb4d5f988c11f67d5eeab9ae
 }
 
 .header-item {
 	display: flex;
-<<<<<<< HEAD
-=======
 	justify-content: center;
 	padding: 0 24px;;
 }
 
 .main-header-cart {
->>>>>>> da847c4de9568703fb4d5f988c11f67d5eeab9ae
 }
 
-.advantages-main {
-	display: flex;
-	align-items: center;
-<<<<<<< HEAD
-=======
-	margin: 0 auto;
-	padding: 0 0;
+input[type='radio'] {
+	display: none;
 }
 
 .slider {
 	display: flex;
 	align-items: center;
+	padding-top: 67px;
+	padding-bottom: 80px;
+}
+
+.slides h2 {
+	font-size: 36px;
 }
 
 .slide {
+	display: none;
 	width: 376px;
->>>>>>> da847c4de9568703fb4d5f988c11f67d5eeab9ae
+}
+
+input:checked:nth-child(1) ~ .slides .slide1 {
+	display: block;
+}
+
+input:checked:nth-child(2) ~ .slides .slide2 {
+	display: block;
+}
+
+input:checked:nth-child(3) ~ .slides .slide3 {
+	display: block;
+}
+
+.slider-control {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #000;
+}
+
+
+
+
+
+.advantages {
+	
+}
+
+.advantages-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 507px;
+	margin: 0 auto;
+	padding: 0 0;
+	box-shadow: 0 2px 0px 0px #ececec;
+}
+
+.advantages-main p {
+	width: 240px;
+	max-height: 42px;
+}
+
+.advantages-main li {
+	list-style-type: none;
+}
+
+.studio-display-inner {
+	display: flex;
+	justify-content: space-between;
+	height: 525px;
+	padding-bottom: 76px;
+	box-shadow: 0 2px 0px 0px #ececec;
+}
+
+.studio-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 650px;
+	padding-top: 80px;
+}
+
+.studio-main h2 {
+	font-size: 36px;
+	letter-spacing: 0.4px;
+	font-weight: bold;
+}
+
+.studio-main p {
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+.studio-main h4 {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.studio-image {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 40px;
+}
+
+.studio-image h4 {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.studio-image-info {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.studio-image-info-item {
+	width: 105px;
+}
+
+.studio-image-info-item p {
+	font-size: 16px;
+	letter-spacing: 0.2px;
+}
+
+.studio-image-info li{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.studio-image-info span{
+	font-size: 36px;
+	font-weight: bold;
+	
 }
