@@ -36,6 +36,10 @@ ul {
 	height: 545px;
 }
 
+.main-header {
+	text-transform: uppercase;
+}
+
 .main-header-nav {
 	display: flex;
 	align-items: center;
@@ -86,6 +90,18 @@ input[type='radio'] {
 	width: 500px;
 }
 
+.slide1 {
+	background-image: url(/img/slide1.png);
+}
+
+.slide2 {
+	background-image: url(/img/slide2.png);
+}
+
+.slide3 {
+	background-image: url(/img/slide3.png);
+}
+
 input:checked:nth-child(1) ~ .slides .slide1 {
 	display: block;
 }
@@ -114,9 +130,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .slider-controls {
-	display: flex;
-	justify-content: center;
-	padding-right: 676px;
+	
 }
 
 .advantages {
@@ -125,8 +139,8 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .advantages-main {
 	display: flex;
-	align-items: center;
-	height: 507px;
+	flex-wrap: wrap;
+	min-height: 507px;
 	margin: 0 -50px;
 	padding: 80px 0;
 	box-shadow: 0 2px 0px 0px #ececec;
@@ -148,7 +162,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .advantages-main p {
 	width: 240px;
-	max-height: 42px;
+	min-height: 42px;
 	margin-bottom: 35px;
 	font-size: 16px;
 	line-height: 24px;
@@ -176,20 +190,28 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .studio-main h2 {
-	font-size: 36px;
+	font-size: 45px;
+	line-height: 45px;
 	letter-spacing: 0;
 	font-weight: 500px;
 }
 
 .studio-main p {
 	font-size: 16px;
+	line-height: 24px;
 	letter-spacing: 0;
+	padding-top: 35px;
 }
 
 .studio-main h4 {
 	font-size: 16px;
 	font-weight: bold;
 	text-transform: uppercase;
+	padding-top: 47px;
+}
+
+.studio-main-info-item {
+	padding-top: 35px;
 }
 
 .studio-image {
@@ -204,12 +226,17 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
+	padding-top: 41px;
 }
 
 .studio-image-info {
 	display: flex;
 	justify-content: space-between;
+	padding-top: 49px;
+}
 
+.studio-image-info p {
+	padding-top: 27px;
 }
 
 .studio-image-info-item {
@@ -228,7 +255,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .studio-image-info span {
-	font-size: 36px;
+	font-size: 45px;
 	font-weight: bold;
 }
 
@@ -250,6 +277,40 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .std-partners-logo {
 	padding: 45px 0;
 }
+
+.contacts {
+	padding: 55px 0;
+	background-image: url(img/bg-map.jpg);
+}
+
+.contacts-info {
+	display: inline-block;
+	min-width: 308px;
+	padding: 54px 50px 47px;
+	background-color: #ffffff;
+}
+
+.contacts h4 {
+	margin-bottom: 32px;
+}
+
+.cnt-info-address {
+	margin-bottom: 20px;
+}
+
+.cnt-info-phone {
+	margin-bottom: 37px;
+}
+
+.footer {
+	padding: 69px 0;
+}
+
+.footer-display-inner {
+	display: flex;
+}
+
+
 
 .button {
 	display: inline-block;
