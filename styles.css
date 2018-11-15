@@ -1,12 +1,14 @@
 *, *::before, *::after {
 	box-sizing: inherit;
 }
+
 html {
 	box-sizing: border-box;
 }
 
 body, h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
 .visually-hidden {
@@ -58,6 +60,9 @@ ul {
 }
 
 .main-header-nav a {
+	font-size: 16px;
+	letter-spacing: 0;
+	line-height: 30px;
 	text-decoration: none;
 	color: #111;
 }
@@ -101,8 +106,8 @@ input[type='radio'] {
 
 .slide {
 	display: none;
-	width: 95%;
-	padding: 72px 0 80px;
+	width: 97%;
+	padding: 67px 0 80px;
 }
 
 .slide1 {
@@ -147,7 +152,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .slider-controls {
 	position: absolute;
 	bottom: 96px;
-	left: 50%;
+	left: 45%;
 }
 
 .advantages {
@@ -222,7 +227,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .studio-main h4 {
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700px;
 	text-transform: uppercase;
 	padding-top: 47px;
 }
@@ -240,7 +245,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .studio-image h4 {
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700px;
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: 41px;
@@ -262,7 +267,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .studio-image-info-item p {
 	font-size: 16px;
-	letter-spacing: 0.2px;
+	letter-spacing: 0;
 }
 
 .studio-image-info li{
@@ -274,7 +279,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .studio-image-info span {
 	display: flex;
 	font-size: 45px;
-	font-weight: bold;
+	font-weight: 700px;
 }
 
 .studio-image-info span sup {
@@ -408,6 +413,61 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .main-catalog {
 	display: flex;
 	justify-content: space-between;
+}
+
+.main-catalog li {
+	list-style-type: none;
+}
+
+.sidebar-filter {
+	width: 260px;
+}
+
+.catalog-sort {
+	margin-bottom: 59px;
+}
+
+.catalog {
+	width: 780px;
+	padding-left: 20px;
+}
+
+.catalog-item {
+	margin-bottom: 33px;
+}
+
+.catalog-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 27px;
+}
+
+.catalog-item-info {
+	width: 360px;
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	width: 443px;
+}
+
+.pagination-item {
+	background-color: #ccc;
+	color: #000;
+	font-size: 16px;
+	line-height: 50px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+	
+
+	.pagination-item a {
+		text-decoration: none;
+	}
+
+	
 }
 
 .button {
