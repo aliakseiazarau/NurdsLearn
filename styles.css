@@ -24,6 +24,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
+	position: relative;
 }
 
 ul {
@@ -33,16 +34,18 @@ ul {
 
 .main-header-bg {
 	background-color: #eeeeee;
-	height: 545px;
 }
 
 .main-header {
 	text-transform: uppercase;
+	text-decoration: none;
+	color: #111;
 }
 
 .main-header-nav {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	padding-top: 49px;
 }
 
@@ -50,7 +53,13 @@ ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: auto;
+	text-decoration: none;
+	color: #111;
+}
+
+.main-header-nav a {
+	text-decoration: none;
+	color: #111;
 }
 
 .header-item {
@@ -69,25 +78,31 @@ input[type='radio'] {
 .slider {
 	display: flex;
 	align-items: center;
-	padding-top: 87px;
-	padding-bottom: 80px;
 }
 
 .slides {
-	display: flex;
-	align-items: stretch;
+	width: 100%;
 }
 
 .slides h2 {
 	font-size: 55px;
 	letter-spacing: 0;
 	line-height: 55px;
-	font-weight: medium;
+	font-weight: 500px;
+	padding-bottom: 27px;
+}
+
+.slides p {
+	font-size: 16px;
+	letter-spacing: 0;
+	line-height: 24px;
+	padding-bottom: 42px;
 }
 
 .slide {
 	display: none;
-	width: 500px;
+	width: 43%;
+	padding: 87px 0 80px;
 }
 
 .slide1 {
@@ -114,12 +129,6 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	display: block;
 }
 
-.slider .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-}
-
 .slider-control {
 	display: inline-block;
 	width: 18px;
@@ -130,7 +139,9 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .slider-controls {
-	
+	position: absolute;
+	bottom: 96px;
+	left: 50%;
 }
 
 .advantages {
@@ -140,14 +151,10 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .advantages-main {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	min-height: 507px;
-	margin: 0 -50px;
 	padding: 80px 0;
 	box-shadow: 0 2px 0px 0px #ececec;
-}
-
-.advantages-main li {
-	padding: 0 50px;
 }
 
 .advantages-main img {
@@ -158,6 +165,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	margin-bottom: 26px;
 	font-size: 24px;
 	line-height: 30px;
+	text-transform: uppercase;
 }
 
 .advantages-main p {
@@ -168,9 +176,12 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	line-height: 24px;
 }
 
-
 .advantages-main li {
 	list-style-type: none;
+}
+
+.advantages-item {
+	width: 31%;
 }
 
 .studio-display-inner {
@@ -255,8 +266,15 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .studio-image-info span {
+	display: flex;
 	font-size: 45px;
 	font-weight: bold;
+}
+
+.studio-image-info span sup {
+	font-size: 25px;
+	position: relative;
+	top: 4px;
 }
 
 .studio-partners {
@@ -272,6 +290,26 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .studio-partners li {
 	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	position: relative;
+}
+
+.studio-partners li:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 21px;
+	bottom: 21px;
+	width: 2px;
+	background: #ccc;
+	opacity: 0.5;
+}
+
+.studio-partners li:last-child::after { 
+	display: none; 
 }
 
 .std-partners-logo {
@@ -310,6 +348,37 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .footer-display-inner {
 	display: flex;
+	align-items: center;
+}
+
+.footer-social {
+	display: flex;
+}
+
+.footer-social-item {
+	font-size: 0;
+	width: 78px;
+	height: 78px;
+	border-radius: 50%;
+	display: inline-block;
+	background: #e1e1e1;
+	margin: 0 6px;
+}
+
+.footer-text {
+	margin-left: 139px;
+}
+
+.footer-text h3 {
+	font-size: 36px;
+	letter-spacing: 0;
+	line-height: 36px;
+}
+
+.footer-text p {
+	font-size: 16px;
+	letter-spacing: 0;
+	line-height: 22px;
 }
 
 .footer-text h3 {
