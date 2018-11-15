@@ -428,6 +428,9 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	margin-bottom: 59px;
 }
 
+.catalog-sort fieldset {
+}
+
 .catalog {
 	width: 780px;
 	padding-left: 20px;
@@ -452,22 +455,37 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	display: flex;
 	justify-content: space-between;
 	width: 443px;
+	margin-bottom: 60px;
 }
 
 .pagination-item {
-	background-color: #ccc;
+	width: 50px;
+	text-align: center;
+	background-color: #eee;
 	color: #000;
 	font-size: 16px;
 	line-height: 50px;
 	border-radius: 3px;
 	text-transform: uppercase;
 }
-	
 
-	.pagination-item a {
-		text-decoration: none;
-		color: #000;
+	
+.pagination-item:last-child {
+	width: 260px;
 }
+
+.pagination .active {
+	background-color: #fff;
+	border: 3px solid #dbdbdb;
+	line-height: 44px;
+}
+
+.pagination-item a {
+	text-decoration: none;
+	color: #000;
+	font-weight: medium;
+}
+
 
 
 
