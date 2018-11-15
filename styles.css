@@ -281,6 +281,8 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .contacts {
 	padding: 55px 0;
 	background-image: url(img/bg-map.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .contacts-info {
@@ -310,7 +312,9 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	display: flex;
 }
 
-
+.footer-text h3 {
+	font-size:
+}
 
 .button {
 	display: inline-block;
