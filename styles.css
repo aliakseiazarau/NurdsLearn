@@ -101,20 +101,26 @@ input[type='radio'] {
 
 .slide {
 	display: none;
-	width: 43%;
-	padding: 87px 0 80px;
+	width: 95%;
+	padding: 72px 0 80px;
 }
 
 .slide1 {
-	background-image: url(/img/slide1.png);
+	background-image: url(img/slide1.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 .slide2 {
-	background-image: url(/img/slide2.png);
+	background-image: url(img/slide2.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 .slide3 {
-	background-image: url(/img/slide3.png);
+	background-image: url(img/slide3.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 input:checked:nth-child(1) ~ .slides .slide1 {
@@ -373,6 +379,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	font-size: 36px;
 	letter-spacing: 0;
 	line-height: 36px;
+	margin-bottom: 12px;
 }
 
 .footer-text p {
@@ -381,8 +388,26 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	line-height: 22px;
 }
 
-.footer-text h3 {
-	font-size:
+
+
+/* Разметка страницы каталога */
+
+
+
+.catalog-ttl {
+	padding: 82px 0 116px;
+}
+
+.catalog-title {
+	font-size: 55px;
+	letter-spacing: 0px;
+	line-height: 55px;
+	text-align: center;
+}
+
+.main-catalog {
+	display: flex;
+	justify-content: space-between;
 }
 
 .button {
@@ -419,4 +444,16 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .contact-info-btn {
 	width: 219px;
+}
+
+.filter-button {
+	width: 260px;
+	background-color: #ccc;
+	color: #111;
+	padding: 0;
+	border-width: 0px;
+}
+
+.catalog-button {
+	width: 200px;
 }
