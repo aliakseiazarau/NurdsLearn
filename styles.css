@@ -465,10 +465,10 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 	.pagination-item a {
 		text-decoration: none;
-	}
-
-	
 }
+
+
+
 
 .button {
 	display: inline-block;
