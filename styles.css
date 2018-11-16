@@ -437,6 +437,9 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .catalog-item {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
 	margin-bottom: 33px;
 }
 
@@ -448,7 +451,20 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .catalog-item-info {
+	position: absolute;
 	width: 360px;
+	text-align: center;
+	background-color: #eee;
+}
+
+.catalog-item-title {
+	padding-top: 33px;
+	margin-bottom: 27px;
+}
+
+.catalog-item-description {
+	margin-bottom: 30px;
+	color: #666666;
 }
 
 .pagination {
@@ -536,4 +552,5 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .catalog-button {
 	width: 200px;
+	margin-bottom: 43px;
 }
