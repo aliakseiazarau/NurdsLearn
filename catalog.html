@@ -21,7 +21,7 @@
 						<li class="header-item">
 							<a href="#">Клиенты</a>
 						</li>
-						<li class="header-item header-item-selected">
+						<li class="header-item active">
 							<a href="#">Магазин</a>
 						</li>
 						<li class="header-item">
@@ -42,21 +42,25 @@
 			<section class="sidebar-filter">
 				<h2 class="visually-hidden">Фильтр типов сайтов</h2>
 				<form class="catalog-filter" method="get" action="#" id="filter-form">
-					<fieldset>
-						<legend>Стоимость:</legend>
+					<div class="filter-slider">
+						<h4 class="fltr-ttl-price">Стоимость:</h4>
 						<div class="filter-price">
 							<div class="filter-min"></div>
 							<div class="filter-max"></div>
 						</div>
 						<div class="filter-inputs">
-							<label for="">От</label>
-							<input class="filter-field" type="text" name="filter-field-min" id="filter-field-min" placeholder="0">
-							<label for="">До</label>
-							<input class="filter-field" type="text" name="filter-field-max" id="filter-field-max" placeholder="15 000">
+							<div class="price-start">
+								<label for="">От</label>
+								<input class="filter-field" type="text" name="filter-field-min" id="filter-field-min" placeholder="0">
+							</div>
+							<div class="price-end">
+								<label for="">До</label>
+								<input class="filter-field" type="text" name="filter-field-max" id="filter-field-max" placeholder="15 000">
+							</div>	
 						</div>
-					</fieldset>
-					<fieldset>
-						<legend>Сетка:</legend>
+					</div>
+					<div class="fltr-grid-type">
+						<h4>Сетка:</h4>
 						<ul>
 							<li class="filter-option">
 								<input class="filter-input flt-input-radio" type="radio" name="filter-sites-radio" value="adaptive" id="filter-adaptive" checked>
@@ -71,9 +75,9 @@
 								<label for="filter-rubber">Резиновая</label> 
 							</li>
 						</ul>
-					</fieldset>
-					<fieldset>
-						<legend>Особенности:</legend>
+					</div>
+					<div class="fltr-properties">
+						<h4>Особенности:</h4>
 						<ul>
 							<li class="filter-option">
 								<input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked="checked">
@@ -96,7 +100,7 @@
 								<label for="filter-cart">Корзина</label>
 							</li>
 						</ul>
-					</fieldset>
+					</div>
 					<button type="submit" class="button filter-button">Показать</button>
 				</form>
 			</section>
@@ -104,18 +108,18 @@
 				<section class="catalog">
 					<h2 class="visually-hidden">Список сайтов</h2>
 					<form class="catalog-sort" method="get" action="#" id="sort-form">
-						<fieldset class="jopa">
-							<legend>Сортировать:</legend>
+						<div class="ctlg-srt">
+							<h4>Сортировать:</h4>
 							<div class="sort-sites">
 								<a class="active" href="#">По цене</a>
 								<a href="#">По типу</a>
 								<a href="#">По названию</a>
 							</div>
 							<div class="sort-order">
-								<a class="sort-desc active"href="#">По возрастанию</a>
-								<a class="sort-asc" href="#">По убыванию</a>
+								<a class="sort-desc active"href="#">По возр</a>
+								<a class="sort-asc" href="#">По уб</a>
 							</div>	
-						</fieldset>
+						</div>
 					</form>
 					<ul class="catalog-list">
 						<li class="catalog-item">
