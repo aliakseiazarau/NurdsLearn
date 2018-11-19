@@ -363,7 +363,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .std-partners-logo-item:hover {
 	opacity: 1;
-	transition-duration: .1s;
+	transition-duration: .2s;
 }
 
 .std-partners-logo-item:active {
@@ -451,7 +451,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .footer-social-item:hover {
 	background: #e74246;
-	transition-duration: .1s;
+	transition-duration: .2s;
 }
 
 .footer-social-item:active {
@@ -617,10 +617,12 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .catalog-item:hover {
 	box-shadow: 0 0 15px 6px rgba(0,1,1, 0.25);
+	transition-duration: 0.2s;
 }
 
 .catalog-item:hover .catalog-item-info {
 	display: block;
+	transition-duration: 0.2s;
 }
 
 .catalog-list {
@@ -703,7 +705,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .button:hover {
 	background-color: #e74246;
-	transition-duration: .1s;	
+	transition-duration: .2s;	
 }
 
 .button:active {
