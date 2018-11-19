@@ -53,8 +53,6 @@ ul {
 
 .main-header-nav ul {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	text-decoration: none;
 	color: #111;
 }
@@ -105,13 +103,14 @@ ul {
 	font-size: 16px;
 	letter-spacing: 0;
 	line-height: 24px;
-	padding-bottom: 42px;
+	padding-bottom: 39px;
 }
 
 .slide {
 	display: none;
 	width: 97%;
 	padding: 67px 0 80px;
+	animation: 30s 24s ease-in-out infinite;
 }
 
 .slide1 {
@@ -144,6 +143,11 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	display: block;
 }
 
+
+/* figure:nth-of-type(5) {
+	animation: bild 30s 24s ease-in-out infinite;
+} */
+
 .slider-control {
 	display: inline-block;
 	width: 18px;
@@ -151,7 +155,37 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	margin: 0 8.5px;
 	border-radius: 50%;
 	background: #ffff;
+	position:relative;
 }
+
+.slider-control::after {
+	content: '';
+	display: none;
+	background: #ffffff;
+	border: 2px solid #c1c1c1;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	position:absolute;
+	top: 5px;
+	left: 5px;
+}
+
+input:checked:nth-child(1) ~ .slider-controls .slider-control:nth-child(1)::after {
+	display: block;
+}
+
+input:checked:nth-child(2) ~ .slider-controls .slider-control:nth-child(2)::after {
+	display: block;
+}
+
+input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::after {
+	display: block;
+}
+
+
+
+
 
 .slider-controls {
 	position: absolute;
@@ -173,11 +207,11 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .advantages-main img {
-	margin-bottom: 26px;
+	margin-bottom: 20px;
 }
 
 .advantages-main h3 {
-	margin-bottom: 26px;
+	margin-bottom: 16px;
 	font-size: 24px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -186,7 +220,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .advantages-main p {
 	width: 245px;
 	min-height: 42px;
-	margin-bottom: 35px;
+	margin-bottom: 33px;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0;
@@ -203,7 +237,6 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .studio-display-inner {
 	display: flex;
 	justify-content: space-between;
-	height: 525px;
 	padding-bottom: 76px;
 	box-shadow: 0 2px 0px 0px #ececec;
 }
@@ -211,12 +244,12 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .studio-main {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
 	width: 655px;
-	padding-top: 80px;
+	padding-top: 77px;
 }
 
 .studio-main h2 {
+	margin-bottom: 33px;
 	font-size: 45px;
 	line-height: 45px;
 	letter-spacing: 0;
@@ -227,25 +260,31 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0;
-	padding-top: 35px;
+	margin-bottom: 40px;
 }
 
 .studio-main h4 {
 	font-size: 16px;
 	font-weight: 700px;
 	text-transform: uppercase;
-	padding-top: 47px;
+	margin-bottom: 29px;
 }
 
 .studio-main-info-item {
-	padding-top: 35px;
+	margin-bottom: 29px;
+}
+
+.studio-main-info-item:last-child {
+	margin-bottom: 0px;
 }
 
 .studio-image {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	padding-top: 40px;
+	padding-top: 41px;
+}
+ .studio-image img {
+	margin-bottom: 39px;
 }
 
 .studio-image h4 {
@@ -253,21 +292,28 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	font-weight: 700px;
 	text-transform: uppercase;
 	text-align: center;
-	padding-top: 41px;
+	margin-bottom: 40px;
 }
 
 .studio-image-info {
 	display: flex;
-	justify-content: space-between;
-	padding-top: 49px;
 }
 
 .studio-image-info p {
-	padding-top: 27px;
 }
 
 .studio-image-info-item {
 	width: 105px;
+	margin-right: 14px;
+}
+
+.studio-image-info-item:last-child {
+	margin-right: 0;
+}
+
+.studio-image-info-item span {
+	margin-bottom: 14px;
+	font-weight: 700;
 }
 
 .studio-image-info-item p {
@@ -278,7 +324,6 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 .studio-image-info li{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
 .studio-image-info span {
@@ -329,7 +374,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .std-partners-logo {
-	padding: 45px 0;
+	padding: 46px 0 40px;
 }
 
 .contacts {
@@ -347,11 +392,13 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .contacts h4 {
-	margin-bottom: 32px;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 29px;
 }
 
 .cnt-info-address {
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
 
 .cnt-info-phone {
@@ -382,7 +429,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 }
 
 .footer-text {
-	margin-left: 139px;
+	margin-left: 132px;
 }
 
 .footer-text h3 {
@@ -525,6 +572,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .sort-sites {
 	margin-right: 48px;
+	margin-left: auto;
 }
 
 .catalog-item {
@@ -541,10 +589,6 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .catalog-item:hover .catalog-item-info {
 	display: block;
-}
-
-.catalog-item a{
-	line-height: 0px;
 }
 
 .catalog-list {
