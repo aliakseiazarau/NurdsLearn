@@ -41,12 +41,14 @@
 		<div class="main-catalog">
 			<section class="sidebar-filter">
 				<h2 class="visually-hidden">Фильтр типов сайтов</h2>
-				<form class="catalog-filter" method="get" action="#" id="filter-form">
+				<form class="catalog-filter" method="post" action="#" id="filter-form">
 					<div class="filter-slider">
-						<h4 class="fltr-ttl-price">Стоимость:</h4>
+						<h4 class="filter-title-price">Стоимость:</h4>
 						<div class="filter-price">
-							<div class="filter-min"></div>
-							<div class="filter-max"></div>
+							<div class="slider-line">
+								<div class="filter-min"></div>
+								<div class="filter-max"></div>
+							</div>
 						</div>
 						<div class="filter-inputs">
 							<div class="price-start">
@@ -107,8 +109,8 @@
 		
 				<section class="catalog">
 					<h2 class="visually-hidden">Список сайтов</h2>
-					<form class="catalog-sort" method="get" action="#" id="sort-form">
-						<div class="ctlg-srt">
+					<div class="catalog-sort">
+						<div class="catalog-sorting">
 							<h4>Сортировать:</h4>
 							<div class="sort-sites">
 								<a class="active" href="#">По цене</a>
@@ -120,7 +122,7 @@
 								<a class="sort-asc" href="#">По убыванию</a>
 							</div>	
 						</div>
-					</form>
+					</div>
 					<ul class="catalog-list">
 						<li class="catalog-item">
 							<div class="catalog-item-info">
@@ -185,8 +187,8 @@
 		<div class="container">
 			<div class="contacts-info">
 				<h4>NЁRDS DESIGN STUDIO</h4>
-				<p class="cnt-info-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д.19.8</p>
-				<p class="cnt-info-phone"> тел. <a href="tel:+78122757575">+7(812)275-75-75</a></p>
+				<p class="contact-info-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д.19.8</p>
+				<p class="contact-info-phone"> тел. <a class="contact-info-phone" href="tel:+78122757575">+7(812)275-75-75</a></p>
 				<a class="button contact-info-btn" href="#">Напишите нам</a>
 			</div>
 		</div>

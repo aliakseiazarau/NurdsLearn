@@ -89,11 +89,18 @@ ul {
 	opacity: 0.3;
 }
 
-.header-item .active {
-	text-decoration: underline;
-	color: #fb565a;
+.header-item.active a{
+	border-bottom: 2px solid #fb565a;
 }
-.main-header-cart {
+
+.main-header-cart:hover {
+	color: #fb565a;
+	transition-duration: 0.2s;
+}
+
+.main-header-cart:active {
+	color: #000;
+	opacity: 0.3;
 }
 
 .slider input[type='radio'] {
@@ -428,12 +435,19 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	margin-bottom: 29px;
 }
 
-.cnt-info-address {
+.contact-info-address {
 	margin-bottom: 16px;
 }
 
-.cnt-info-phone {
+.contact-info-phone {
 	margin-bottom: 37px;
+}
+
+.contact-info-address, .contact-info-phone {
+	font-size: 16px;
+	line-height: 18px;
+	color: #666666;
+	text-decoration: none;
 }
 
 .footer {
@@ -523,7 +537,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	font-size: 18px;
 }
 
-.fltr-ttl-price {
+.filter-title-price {
 	margin-bottom: 55px;
 }
 
@@ -531,6 +545,11 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	min-height: 81px;
 	background: #eeeeee;
 	margin-bottom: 14px;
+}
+
+.slider-line {
+	background: #d7dcde;
+	height: 1px;
 }
 
 .filter-min, .filter-max {
@@ -543,15 +562,38 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 .filter-inputs {
 	display: flex;
 	justify-content: space-between;
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
+}
+
+::-webkit-input-placeholder {
+	color: #283136;;
+}
+
+.filter-inputs input {
+	background: #eeeeee;
+	border: none;
 }
 
 .price-start, .price-end {
 	align-content: center;
-	width: 124px;
 }
 
-.price-start {
-	margin-right: 45px;
+.price-start label {
+	margin-right: 10px;
+}
+
+.price-end label {
+	margin-right: 10px;
+}
+
+.filter-inputs input {
+	text-align: center;
+	font-size: 16px;
+	line-height: 22px;
+	color: #283136;
+	border-radius: 3px;
 }
 
 .filter-field {
@@ -602,12 +644,11 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	padding-left: 20px;
 }
 
-.ctlg-srt {
+.catalog-sorting {
 	display: flex;
 }
 
-.ctlg-srt h4 {
-	margin-right: 266px;
+.catalog-sorting h4 {
 	font-size: 18px;
 	text-transform: uppercase;
 }
@@ -615,6 +656,32 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 .sort-sites {
 	margin-right: 48px;
 	margin-left: auto;
+}
+
+.sort-sites a {
+	margin-right: 25px;
+	color: #000;
+	opacity: 0.3;
+	font-size: 14px;
+	line-height: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.sort-sites a:hover {
+	opacity: 0.6;
+}
+
+.sort-sites a.active, .sort-sites a:active {
+	opacity: 1;
+}
+
+.sort-sites.active  {
+	color: #000;
+}
+
+.sort-order {
+	font-size: 0;
 }
 
 .catalog-item {
