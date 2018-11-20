@@ -1,5 +1,14 @@
-*, *::before, *::after {
+ *, *::before, *::after {
 	box-sizing: inherit;
+}
+
+::placeholder {
+	font-family: 'Roboto', sans-serif!important
+}
+
+
+button, input, select, textarea {
+	font: inherit;
 }
 
 html {
@@ -931,6 +940,8 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	line-height: 18px;
 	color: #444444;
 	border: 2px solid #d7dcde;
+	border-radius: 3px;
+	padding: 0 16px;
 }
 
 .form-input-item input:hover {
@@ -966,12 +977,20 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .form-textarea textarea {
 	height: 118px;
+	
 	font-size: 16px;
 	line-height: 18px;
 	color: #444444;
 	border: 2px solid #d7dcde;
+	border-radius: 3px;
+	padding: 14px 16px 0;
 	resize: none;
 }
+
+.form-textarea textarea::placeholder {
+ 	font-family: 'Roboto', sans-serif;
+}
+
 
 .form-textarea textarea:hover {
 	border: 2px solid #b4b9bb;
@@ -986,6 +1005,8 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .form-textarea textarea::-webkit-input-placeholder {
 	color: rgba(68,68,68, 0.5);
+	font-family: 'Roboto', sans-serif;
+	
 }
 
 .form-textarea textarea:hover::-webkit-input-placeholder { 
