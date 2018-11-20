@@ -219,24 +219,26 @@
 		<!-- Это модалка, которая вызывается из секции с контактами-->
 
 	<div class="modal visually-hidden">
-		<h2 class="modal-title">Напишите нам</h2>
-		<form class="modal-form" action="index.html" method="post" id="form">
-			<div class="form-inputs">
-				<div class="form-input-item">
-					<label for="name">Ваше имя:</label>
-					<input type="text" id="name" name="name" placeholder="Имя Фамилия" />
+		<div class="modal-window">
+			<h2 class="modal-title">Напишите нам</h2>
+			<form class="modal-form" action="index.html" method="post" id="form">
+				<div class="form-inputs">
+					<div class="form-input-item">
+						<label for="name">Ваше имя:</label>
+						<input type="text" id="name" name="name" placeholder="Имя Фамилия" />
+					</div>
+					<div class="form-input-item">
+						<label for="email">Ваш e-mail:</label>
+						<input type="email" id="email" name="email" placeholder="email@example.com" />
+					</div>
 				</div>
-				<div class="form-input-item">
-					<label for="email">Ваш e-mail:</label>
-					<input type="email" id="email" name="email" placeholder="email@example.com" />
+				<div class="form-textarea">
+					<label for="message-text">Текст письма:</label>
+					<textarea rows="3" id="message-text" name ="message" placeholder="В Свободной форме"></textarea>
 				</div>
-			</div>
-			<div class="form-textarea">
-				<label for="message-text">Текст письма:</label>
-				<textarea rows="3" id="message-text" name ="message" placeholder="В Свободной форме"></textarea>
-			</div>
 				<button class="button form-button" type="submit" name="button">Отправить</button>
-		</form>
+			</form>
+		</div>	
 	</div>	
 </body>
 </html>
