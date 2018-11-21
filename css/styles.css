@@ -20,6 +20,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 	font-family: 'Roboto', sans-serif;
 }
 
+
 .visually-hidden {
 	position: absolute;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -70,6 +71,7 @@ ul {
 	font-size: 16px;
 	letter-spacing: 0;
 	line-height: 30px;
+	font-weight: 500;
 	text-decoration: none;
 	color: #111;
 }
@@ -101,6 +103,25 @@ ul {
 .header-item.active a{
 	border-bottom: 2px solid #fb565a;
 }
+
+.main-header-nav .main-header-cart {
+	position: relative;
+	padding-left: 42px;
+}
+
+
+.main-header-cart::before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 2px;
+	width: 15px;
+	height: 15px;
+	background-image: url(../img/cart-icon.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
 
 .main-header-cart:hover {
 	color: #fb565a;
@@ -189,7 +210,8 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	margin: 0 8.5px;
 	border-radius: 50%;
 	background: #ffff;
-	position:relative;
+	position: relative;
+	cursor: pointer;
 }
 
 .slider-control::after {
@@ -219,16 +241,10 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 
 
-
-
 .slider-controls {
 	position: absolute;
 	bottom: 96px;
 	left: 45%;
-}
-
-.advantages {
-
 }
 
 .advantages-main {
@@ -481,6 +497,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	display: inline-block;
 	background: #e1e1e1;
 	margin: 0 6px;
+	cursor: pointer;
 }
 
 .footer-social-item:hover {
@@ -754,6 +771,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	line-height: 50px;
 	border-radius: 3px;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 	
@@ -805,6 +823,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: 500;
+	cursor: pointer;
 }
 
 .button:hover {
