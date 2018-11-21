@@ -219,10 +219,16 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 
 
+
+
 .slider-controls {
 	position: absolute;
 	bottom: 96px;
 	left: 45%;
+}
+
+.advantages {
+
 }
 
 .advantages-main {
@@ -885,7 +891,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 										
 
 .modal {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
