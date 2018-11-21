@@ -1,5 +1,14 @@
-*, *::before, *::after {
+ *, *::before, *::after {
 	box-sizing: inherit;
+}
+
+::placeholder {
+	font-family: 'Roboto', sans-serif!important
+}
+
+
+button, input, select, textarea {
+	font: inherit;
 }
 
 html {
@@ -896,11 +905,14 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 1;
 	z-index: 2;
 	padding: 72px 100px 84px;
+	box-shadow: 0 20px 40px 0 rgba(0,1,1, 0.75);
+
 }
 
 .modal-title {
 	font-size: 45px;
 	line-height: 45px;
+	font-weight: 500;
 	margin-bottom: 46px;
 }
 
@@ -919,7 +931,38 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .form-input-item input {
 	height: 50px;
+	font-size: 16px;
+	line-height: 18px;
+	color: #444444;
+	border: 2px solid #d7dcde;
+	border-radius: 3px;
+	padding: 0 16px;
 }
+
+.form-input-item input:hover {
+	border: 2px solid #b4b9bb;
+	transition-duration: 0.2s;
+}
+
+.form-input-item input:focus {
+	border: 2px solid #000000;
+	transition-duration: 0.2s;
+	outline: 0;
+}
+
+.form-input-item input::-webkit-input-placeholder {
+	color: rgba(68,68,68, 0.5);
+}
+
+.form-input-item input:hover::-webkit-input-placeholder { 
+	color: rgba(68,68,68, 0.5);
+	transition-duration: 0.2s;
+} 
+
+.form-input-item input:focus::-webkit-input-placeholder { 
+	color: #444444;
+	transition-duration: 0.2s;
+} 
 
 .form-textarea {
 	display: flex;
@@ -929,8 +972,67 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .form-textarea textarea {
 	height: 118px;
+	
+	font-size: 16px;
+	line-height: 18px;
+	color: #444444;
+	border: 2px solid #d7dcde;
+	border-radius: 3px;
+	padding: 14px 16px 0;
+	resize: none;
+}
+
+.form-textarea textarea::placeholder {
+ 	font-family: 'Roboto', sans-serif;
+}
+
+
+.form-textarea textarea:hover {
+	border: 2px solid #b4b9bb;
+	transition-duration: 0.2s;
+}
+
+.form-textarea textarea:focus {
+	border: 2px solid #000000;
+	transition-duration: 0.2s;
+	outline: 0;
+}
+
+.form-textarea textarea::-webkit-input-placeholder {
+	color: rgba(68,68,68, 0.5);
+	font-family: 'Roboto', sans-serif;
+	
+}
+
+.form-textarea textarea:hover::-webkit-input-placeholder { 
+	color: rgba(68,68,68, 0.5);
+	transition-duration: 0.2s;
+} 
+
+.form-textarea textarea:focus::-webkit-input-placeholder { 
+	color: #444444;
+	transition-duration: 0.2s;
+} 
+
+.form-inputs, .form-textarea {
+	border-width: 2px;
+	border-color: #d7dcde;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	outline-color: rgba(68,68,68, 1);
 }
 
 .form-inputs label, .form-textarea label {
 	margin-bottom: 12px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+}
+
+.form-button {
+	width: 260px;
+	height: 50px;
+	border-width: 0;
+	font-weight: 500;
 }
