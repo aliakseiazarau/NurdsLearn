@@ -1022,17 +1022,45 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 										
 .modal-window {
 	width: 960px;
-	height: 590px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
 	background: #fff;
 	opacity: 1;
-	z-index: 2;
+	z-index: 1;
 	padding: 72px 100px 84px;
 	box-shadow: 0 20px 40px 0 rgba(0,1,1, 0.75);
+}
 
+.modal-header span::after{
+	content: "";
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	top: 80px;
+	right: 90px;
+	background-image: url(../img/close-cross.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 0.3;
+}
+
+.modal-header {
+	display: flex;
+	
+}
+
+.modal-header span {
+	font-size: 0;
+}
+
+.modal-header span:hover::after {
+	opacity: 1;
+}
+
+.modal-header span:active::after {
+	opacity: 0.1;
 }
 
 .modal-title {
