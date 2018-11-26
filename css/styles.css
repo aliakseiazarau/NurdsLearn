@@ -675,28 +675,74 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	margin-bottom: 62px;
 }
 
-.fltr-grid-type {
+.filter-grid-type {
 	margin-bottom: 51px;
 }
 
-.fltr-grid-type h4 {
+.filter-grid-type h4 {
 	margin-bottom: 21px;
 }
 
-.fltr-grid-type ul li {
+.filter-grid-type ul li {
 	display: flex;
 	margin-bottom: 15px;
 }
 
-.fltr-properties {
+.filter-input-radio {
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-image: url(../img/radio-off.svg);
+	background-repeat: no-repeat;
+	opacity: 0.4;
+}
+
+.filter-input-radio:hover {
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-image: url(../img/radio-off.svg);
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+	
+.filter-option {
+	position: relative;
+	padding-left: 35px;
+	color: #000;
+}
+
+/* .filter-option label,span {
+	padding-top: 3px;
+	color: rgba(40, 49, 54, 255);
+}
+
+.filter-option label,span:hover {
+	padding-top: 3px;
+	color: #000;
+	opacity: 1; */
+/* } */
+
+/* .filter-rubber {
+	padding-top: 3px;
+	color: rgba(40, 49, 54, 255);
+} */
+
+.filter-properties {
 	margin-bottom: 48px;
 }
 
-.fltr-properties h4 {
+.filter-properties h4 {
 	margin-bottom: 21px;
 }
 
-.fltr-properties ul li {
+.filter-properties ul li {
 	display: flex;
 	margin-bottom: 17px;
 }
