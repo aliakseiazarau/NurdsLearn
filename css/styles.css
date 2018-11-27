@@ -206,6 +206,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .slider-control {
 	display: inline-block;
+	vertical-align: baseline;
 	width: 18px;
 	height: 18px;
 	margin: 0 8.5px;
@@ -436,6 +437,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 .studio-partners li:after {
 	content: '';
 	display: inline-block;
+	vertical-align: baseline;
 	position: absolute;
 	right: 0;
 	top: 21px;
@@ -462,6 +464,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .contacts-info {
 	display: inline-block;
+	vertical-align: baseline;
 	min-width: 308px;
 	padding: 54px 50px 47px;
 	background-color: #ffffff;
@@ -508,6 +511,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	height: 78px;
 	border-radius: 50%;
 	display: inline-block;
+	vertical-align: baseline;
 	background: #e1e1e1;
 	margin: 0 6px;
 	cursor: pointer;
@@ -732,9 +736,10 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	color: #000;
 } 
 
-.filter-grid-list input[type=radio] + label::before{
+.filter-grid-list input[type=radio] + label::before {
 	display: inline-block;
 	position: absolute;
+	vertical-align: baseline;
 	content: '';
 	width: 25px;
 	height: 25px;
@@ -745,7 +750,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 0.4;
 }
 
-.filter-grid-list input[type=radio]:hover + label::before{
+.filter-grid-list input[type=radio]:hover + label::before {
 	position: absolute;
 	content: '';
 	width: 25px;
@@ -768,6 +773,14 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-repeat: no-repeat;
 }
 
+.filter-grid-list input:disabled + label,
+.filter-grid-list input:disabled:hover + label,
+.filter-grid-list input:disabled + label:before,
+.filter-grid-list input:disabled:hover + label:before {
+	color: #283136;
+	opacity: 0.3;
+}
+
 .filter-properties-list input[type=checkbox]{
 	display: none;
 }
@@ -785,9 +798,10 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	margin-bottom: 17px;
 }
 
-.filter-properties-list input[type=checkbox] + label::before{
+.filter-properties-list input[type=checkbox] + label::before {
 	display: inline-block;
 	position: absolute;
+	vertical-align: baseline;
 	content: '';
 	width: 25px;
 	height: 25px;
@@ -798,7 +812,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 0.4;
 }
 
-.filter-properties-list input[type=checkbox]:hover + label::before{
+.filter-properties-list input[type=checkbox]:hover + label::before {
 	position: absolute;
 	content: '';
 	width: 25px;
@@ -1024,6 +1038,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .button {
 	display: inline-block;
+	vertical-align: baseline;
 	font-size: 16px;
 	line-height: 50px;
 	border-radius: 3px;
