@@ -115,6 +115,7 @@ ul {
 	position: relative;
 	padding-left: 42px;
 	padding-top: 6px;
+	margin-left: 45px;
 }
 
 .main-header-cart-icon::before {
@@ -835,6 +836,14 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-repeat: no-repeat;
 }
 
+.filter-properties-list input:disabled + label,
+.filter-properties-list input:disabled:hover + label,
+.filter-properties-list input:disabled + label:before,
+.filter-properties-list input:disabled:hover + label:before {
+	color: #283136;
+	opacity: 0.3;
+}
+
 .catalog-sort {
 	margin-bottom: 59px;
 }
@@ -918,7 +927,8 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 0.6;
 }
 
-.sort-order a.active::before, .sort-order a:active::before {
+.sort-order a.active::before, 
+.sort-order a:active::before {
 	opacity: 1;
 }
 
