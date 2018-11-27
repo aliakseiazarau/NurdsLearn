@@ -198,7 +198,6 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	display: block;
 }
 
-
 /* figure:nth-of-type(5) {
 	animation: bild 30s 24s ease-in-out infinite;
 } */
@@ -238,7 +237,6 @@ input:checked:nth-child(2) ~ .slider-controls .slider-control:nth-child(2)::afte
 input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::after {
 	display: block;
 }
-
 
 
 .slider-controls {
@@ -320,12 +318,28 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	margin-bottom: 29px;
 }
 
+.studio-main-info {
+	list-style: none;
+}
+
 .studio-main-info-item {
 	margin-bottom: 29px;
+	position: relative;
+	padding-left: 35px;
 }
 
 .studio-main-info-item:last-child {
 	margin-bottom: 0px;
+}
+
+.studio-main-info-item::before {
+	content: '';
+	position: absolute;
+	background: #fb565a;
+	width: 25px;
+	height: 2px;
+	top: 9px;
+	left: 0;
 }
 
 .studio-image {
@@ -611,21 +625,31 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 .filter-price {
+	position: relative;
 	min-height: 81px;
 	background: #eeeeee;
 	margin-bottom: 14px;
 }
 
 .slider-line {
+	position: absolute;
+	display: flex;
 	background: #d7dcde;
 	height: 1px;
+	width: 100%;
+	top: 50%;
 }
 
 .filter-min, .filter-max {
+	position: absolute;
 	width: 20px;
 	height: 20px;
+	top: -10px;
 	border-radius: 50%;
 	background-color: #ffffff;
+	background-image: url(../img/filter-button.svg);
+	background-repeat: no-repeat;
+	box-shadow: 0 2px 2px -1px rgba(0,1,1, 0.25);
 }
 
 .filter-inputs {
@@ -688,7 +712,30 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	margin-bottom: 15px;
 }
 
-.filter-input-radio {
+.filter-option {
+	position: relative;
+	color: #000;
+}
+
+
+.filter-grid-list input[type=radio]{
+	display: none;
+}
+
+
+ .filter-option label {
+	padding-top: 3px;
+	padding-left: 35px;
+	color: rgba(40, 49, 54, 255);
+}
+
+.filter-option label:hover {
+	padding-top: 3px;
+	color: #000;
+} 
+
+.filter-grid-list input[type=radio] + label::before{
+	display: inline-block;
 	position: absolute;
 	content: '';
 	width: 25px;
@@ -700,7 +747,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 0.4;
 }
 
-.filter-input-radio:hover {
+.filter-grid-list input[type=radio]:hover + label::before{
 	position: absolute;
 	content: '';
 	width: 25px;
@@ -711,28 +758,21 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-repeat: no-repeat;
 	opacity: 1;
 }
-	
-.filter-option {
-	position: relative;
-	padding-left: 35px;
-	color: #000;
+
+.filter-grid-list input[type=radio]:checked + label::before {
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-image: url(../img/radio-on.svg);
+	background-repeat: no-repeat;
 }
 
-/* .filter-option label,span {
-	padding-top: 3px;
-	color: rgba(40, 49, 54, 255);
+.filter-properties-list input[type=checkbox]{
+	display: none;
 }
-
-.filter-option label,span:hover {
-	padding-top: 3px;
-	color: #000;
-	opacity: 1; */
-/* } */
-
-/* .filter-rubber {
-	padding-top: 3px;
-	color: rgba(40, 49, 54, 255);
-} */
 
 .filter-properties {
 	margin-bottom: 48px;
@@ -745,6 +785,42 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 .filter-properties ul li {
 	display: flex;
 	margin-bottom: 17px;
+}
+
+.filter-properties-list input[type=checkbox] + label::before{
+	display: inline-block;
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-image: url(../img/checkbox-off.svg);
+	background-repeat: no-repeat;
+	opacity: 0.4;
+}
+
+.filter-properties-list input[type=checkbox]:hover + label::before{
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-image: url(../img/checkbox-off.svg);
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+
+.filter-properties-list input[type=checkbox]:checked + label::before {
+	position: absolute;
+	content: '';
+	width: 25px;
+	height: 25px;
+	top: 0;
+	left: 0;
+	background-image: url(../img/checkbox-on.svg);
+	background-repeat: no-repeat;
 }
 
 .catalog-sort {
@@ -920,7 +996,6 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	text-transform: uppercase;
 	cursor: pointer;
 }
-
 	
 .pagination-item:last-child {
 	width: 260px;
