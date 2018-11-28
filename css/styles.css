@@ -58,15 +58,16 @@ ul {
 	align-items: center;
 	justify-content: space-between;
 	padding-top: 49px;
-	margin-bottom: 5px;
 }
 
 .main-header-nav ul {
 	display: flex;
+	flex-wrap: wrap;
 	text-decoration: none;
 	color: #111;
-	padding-top: 8px;
+	padding-top: 5px;
 	padding-left: 10px;
+	padding-right: 50px;
 }
 
 .main-header-nav a {
@@ -170,7 +171,7 @@ ul {
 .slide {
 	display: none;
 	width: 97%;
-	padding: 67px 0 80px;
+	padding: 65px 0 80px;
 	animation: 30s 24s ease-in-out infinite;
 }
 
@@ -206,6 +207,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 
 .slider-control {
 	display: inline-block;
+	vertical-align: baseline;
 	width: 18px;
 	height: 18px;
 	margin: 0 8.5px;
@@ -437,6 +439,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	content: '';
 	display: inline-block;
 	position: absolute;
+	vertical-align: baseline;
 	right: 0;
 	top: 21px;
 	bottom: 21px;
@@ -462,6 +465,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .contacts-info {
 	display: inline-block;
+	vertical-align: baseline;
 	min-width: 308px;
 	padding: 54px 50px 47px;
 	background-color: #ffffff;
@@ -508,6 +512,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	height: 78px;
 	border-radius: 50%;
 	display: inline-block;
+	vertical-align: baseline;
 	background: #e1e1e1;
 	margin: 0 6px;
 	cursor: pointer;
@@ -589,7 +594,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 /* Разметка страницы каталога */
 
 .catalog-ttl {
-	padding: 62px 0 110px;
+	padding: 66px 0 106px;
 }
 
 .catalog-title {
@@ -695,7 +700,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .filter-slider {
 	text-transform: uppercase;
-	margin-bottom: 62px;
+	margin-bottom: 56px;
 }
 
 .filter-grid-type {
@@ -703,12 +708,12 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 .filter-grid-type h4 {
-	margin-bottom: 21px;
+	margin-bottom: 19px;
 }
 
 .filter-grid-type ul li {
 	display: flex;
-	margin-bottom: 15px;
+	margin-bottom: 18px;
 }
 
 .filter-option {
@@ -735,6 +740,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 .filter-grid-list input[type=radio] + label::before{
 	display: inline-block;
 	position: absolute;
+	vertical-align: baseline;
 	content: '';
 	width: 25px;
 	height: 25px;
@@ -777,17 +783,18 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 .filter-properties h4 {
-	margin-bottom: 21px;
+	margin-bottom: 18px;
 }
 
 .filter-properties ul li {
 	display: flex;
-	margin-bottom: 17px;
+	margin-bottom: 18px;
 }
 
 .filter-properties-list input[type=checkbox] + label::before{
 	display: inline-block;
 	position: absolute;
+	vertical-align: baseline;
 	content: '';
 	width: 25px;
 	height: 25px;
@@ -822,12 +829,12 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 .catalog-sort {
-	margin-bottom: 59px;
+	margin-bottom: 55px;
 }
 
 .catalog {
 	width: 784px;
-	padding-left: 20px;
+	padding-left: 24px;
 }
 
 .catalog-sorting {
@@ -1024,6 +1031,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .button {
 	display: inline-block;
+	vertical-align: baseline;
 	font-size: 16px;
 	line-height: 50px;
 	border-radius: 3px;
