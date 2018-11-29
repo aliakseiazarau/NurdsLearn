@@ -103,8 +103,18 @@ ul {
 	opacity: 0.3;
 }
 
-.header-item.active a{
-	border-bottom: 2px solid #fb565a;
+.header-item.active a {
+	position: relative;
+}
+
+.header-item.active a::before {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: #fb565a;
+	left: 0;
+	bottom: -3px;
 }
 
 .main-header-nav {
@@ -128,6 +138,16 @@ ul {
 	background-image: url(../img/cart-icon.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
+}
+
+.main-header-cart-icon.active::before {
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: #fb565a;
+	left: 0;
+	bottom: -3px;
 }
 
 .main-header-cart:hover {
@@ -751,30 +771,24 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 0.4;
 }
 
-.filter-grid-list input[type=radio]:hover + label::before{
-	position: absolute;
-	content: '';
-	width: 25px;
-	height: 25px;
-	top: 0;
-	left: 0;
-	background-image: url(../img/radio-off.svg);
-	background-repeat: no-repeat;
-	opacity: 1;
-}
-
 .filter-grid-list input[type=radio]:checked + label::before {
-	position: absolute;
-	content: '';
-	width: 25px;
-	height: 25px;
-	top: 0;
-	left: 0;
 	background-image: url(../img/radio-on.svg);
 	background-repeat: no-repeat;
 }
 
-.filter-properties-list input[type=checkbox]{
+.filter-grid-list input[type=radio]:hover:not(:disabled) + label::before {
+	opacity: 1;
+}
+
+.filter-grid-list input[type=radio]:disabled + label::before {
+	opacity: 0.1;
+}
+
+.filter-grid-list input[type=radio]:disabled + label {
+	color: rgba(40, 49, 54, 0.4);
+}
+
+.filter-properties-list input[type=checkbox] {
 	display: none;
 }
 
@@ -805,27 +819,21 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	opacity: 0.4;
 }
 
-.filter-properties-list input[type=checkbox]:hover + label::before{
-	position: absolute;
-	content: '';
-	width: 25px;
-	height: 25px;
-	top: 0;
-	left: 0;
-	background-image: url(../img/checkbox-off.svg);
+.filter-properties-list input[type=checkbox]:checked + label::before {
+	background-image: url(../img/checkbox-on.svg);
 	background-repeat: no-repeat;
+}
+
+.filter-properties-list input[type=checkbox]:hover:not(:disabled) + label::before {
 	opacity: 1;
 }
 
-.filter-properties-list input[type=checkbox]:checked + label::before {
-	position: absolute;
-	content: '';
-	width: 25px;
-	height: 25px;
-	top: 0;
-	left: 0;
-	background-image: url(../img/checkbox-on.svg);
-	background-repeat: no-repeat;
+.filter-properties-list input[type=checkbox]:disabled + label::before {
+	opacity: 0.1;
+}
+
+.filter-properties-list input[type=checkbox]:disabled + label {
+	color:  rgba(40, 49, 54, 0.4);
 }
 
 .catalog-sort {
