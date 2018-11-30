@@ -1106,7 +1106,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	box-shadow: inset 0 3px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info-btn {
+.contact-info-button {
 	width: 219px;
 }
 
@@ -1145,8 +1145,13 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	height: 100%;
 	background: rgba(0,0,0, 0);
 	z-index: 1;
+	display: none;
 }
-										
+
+.modal-show {
+	display: block;
+}
+
 .modal-window {
 	width: 960px;
 	position: absolute;
@@ -1160,7 +1165,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	box-shadow: 0 20px 40px 0 rgba(0,1,1, 0.75);
 }
 
-.modal-header span::after {
+.modal-close::after {
 	content: "";
 	position: absolute;
 	width: 21px;
