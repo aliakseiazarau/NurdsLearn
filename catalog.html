@@ -220,7 +220,7 @@
 
 		<!-- Это модалка, которая вызывается из секции с контактами-->
 
-	<div class="modal">
+	<div class="modal visually-hidden">
 		<div class="modal-window">
 			<div class="modal-header">
 				<h2 class="modal-title">Напишите нам</h2>
@@ -245,5 +245,20 @@
 			</form>
 		</div>	
 	</div>	
+	<script>
+		var link = document.querySelector(".contact-info-button");
+		var popup = document.querySelector(".modal");
+		var close = document.querySelector(".modal-close");
+
+		link.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popup.classList.remove("visually-hidden");
+		});
+
+		close.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			popup.classList.add("visually-hidden");
+		});
+	</script>
 </body>
 </html>
