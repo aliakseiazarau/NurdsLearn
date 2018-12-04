@@ -483,16 +483,22 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-size: 100%;
 	background-repeat: no-repeat;
 	position: relative;
-	z-index: 3;
+	min-height: 415px;
+}
+
+.contacts .container {
+	position: relative;
 }
 
 .contacts-info {
+	position: absolute;
+	left: 0;
+	top: 0;
 	display: inline-block;
 	vertical-align: middle;
 	min-width: 308px;
 	padding: 54px 50px 47px;
 	background-color: #ffffff;
-	z-index: 3;
 }
 
 iframe {
@@ -1167,8 +1173,8 @@ iframe {
 	width: 960px;
 	position: absolute;
 	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
+	top: 100px;
+	margin-left: -480px;
 	background: #fff;
 	opacity: 1;
 	z-index: 1000;
@@ -1361,28 +1367,29 @@ iframe {
 
 @keyframes bounce {
 	0% 	 { 
-		transform: translate(-50%,-2000px); 
+		transform: translateY(-2000px); 
 	}
 	70%  {  
-		transform: translate(-50%,-30px); 	
+		transform: translateY(-30px); 	
 	}
 	90%  { 
-		transform: translate(-50%,-10px); 	
+		transform: translateY(-10px); 	
 	}
 	100% { 
-		transform: translate(-50%,0); 	    
+		transform: translateY(0); 	    
 	}
 }
 
 
 @keyframes shake {
 	0%, 100% { 
-		transform: translate(-50%, 0); 
+		transform: translateX(0); 
 	}
 	10%, 30%, 50%, 70%, 90% { 
-		transform: translate(-50%,10px); 
+		transform: translateX(-10px); 
 	}
 	20%, 40%, 60%, 80% { 
-		transform: translate(-50%,5px);  
+		transform: translateX(10px);  
 	}
 }
+
