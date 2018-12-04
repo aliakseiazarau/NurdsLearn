@@ -154,53 +154,57 @@
 		</section>
 	</main>	
 
-		<section class="contacts">
-			<div class="container">
-				<div class="contacts-info">
-					<h4>NЁRDS DESIGN STUDIO</h4>
-					<p class="contact-info-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д.19.8</p>
-					<p class="contact-info-phone"> тел. <a class="contact-info-phone" href="tel:+78122757575">+7(812)275-75-75</a></p>
-					<a class="button contact-info-btn" href="#">Напишите нам</a>
+	<section class="contacts">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d999.2933616315192!2d30.322684691401676!3d59.93899961284656!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1543934922662" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div class="container">
+			<div class="contacts-info">
+				<h4>NЁRDS DESIGN STUDIO</h4>
+				<p class="contact-info-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+				<p class="contact-info-phone"> тел. <a class="contact-info-phone" href="tel:+78122757575">+7(812)275-75-75</a></p>
+				<a class="button contact-info-button" href="#">Напишите нам</a>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-display-inner">
+				<ul class="footer-social">
+					<li class="footer-social-item">
+						<a class="vk-icon" href="https://www.vk.com">Логотип Вконтакте</a>
+					</li>
+					<li class="footer-social-item">
+						<a class="facebook-icon" href="https://www.Facebook.com">Логотип Facebook</a>
+					</li>	
+					<li class="footer-social-item">
+						<a class="insta-icon" href="https://www.Instagram.com">Логотип Instagram</a>
+					</li>	
+				</ul>
+				<div class="footer-text">
+					<h3>Давайте дружить, это выгодно!</h3>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
 				</div>
 			</div>
-		</section>
+		</div>	
+	</footer>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="footer-display-inner">
-					<ul class="footer-social">
-						<li class="footer-social-item">
-							<a class="vk-icon" href="https://www.vk.com">Логотип Вконтакте</a>
-						</li>
-						<li class="footer-social-item">
-							<a class="facebook-icon" href="https://www.Facebook.com">Логотип Facebook</a>
-						</li>	
-						<li class="footer-social-item">
-							<a class="insta-icon" href="https://www.Instagram.com">Логотип Instagram</a>
-						</li>	
-					</ul>
-					<div class="footer-text">
-						<h3>Давайте дружить, это выгодно!</h3>
-						<p>Скидка 10% для друзей из социальных сетей.</p>
-					</div>
-				</div>
-			</div>	
-		</footer>
-
-		<!-- Это модалка, которая вызывается из секции с контактами-->
-
-	<div class="modal visually-hidden">
+	<div class="modal-overlay">
 		<div class="modal-window">
-			<h2 class="modal-title">Напишите нам</h2>
+			<div class="modal-header">
+				<h2 class="modal-title">Напишите нам</h2>
+				<span class="modal-close">Крестик закрытия модального окна</span>
+			</div>
 			<form class="modal-form" action="index.html" method="post" id="form">
 				<div class="form-inputs">
 					<div class="form-input-item">
 						<label for="name">Ваше имя:</label>
-						<input type="text" id="name" name="name" placeholder="Имя Фамилия" />
+						<input type="text" id="name" name="name" placeholder="Имя Фамилия"/>
+						<div class="modal-alert">Введите своё имя</div>
 					</div>
 					<div class="form-input-item">
 						<label for="email">Ваш e-mail:</label>
-						<input type="email" id="email" name="email" placeholder="email@example.com" />
+						<input type="email" id="email" name="email" placeholder="email@example.com"/>
+						<div class="modal-alert">Введите свой email</div>
 					</div>
 				</div>
 				<div class="form-textarea">
@@ -211,6 +215,63 @@
 			</form>
 		</div>
 	</div>	
+	<script>
+		var link = document.querySelector(".contact-info-button");
+		var modal_overlay = document.querySelector(".modal-overlay");
+		var modal_window = document.querySelector(".modal-window");
+		var close = document.querySelector(".modal-close");
+		var form = modal_window.querySelector("form");
+		var clientName = modal_window.querySelector("[name=name]");
+		var clientEmail = modal_window.querySelector("[name=email]");
+		var isStorageSupport = true;
+		var storage_name = localStorage.getItem("clientName");
+		var storage_email = localStorage.getItem("clientEmail");
+		var modal_alert = document.querySelector(".modal-alert");
+		
+
+		link.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			modal_overlay.classList.add("show");
+			modal_window.classList.add("modal-show");
+			window.onscroll = function() {
+				return false;
+			}
+			if (storage_name) {
+				clientName.value = storage_name;
+				clientEmail.focus();
+			} else {
+				clientName.focus();
+			}
+		});
+
+		close.addEventListener("click", function (evt) {
+			evt.preventDefault();
+			modal_overlay.classList.remove("show");
+			modal_overlay.classList.remove("modal-error");
+			modal_window.classList.remove("modal-error");
+		});
+				
+		form.addEventListener("submit", function (evt) {
+			if (!clientName.value || !clientEmail.value) {
+				evt.preventDefault();
+				modal_window.classList.add("modal-error");
+			} else {
+				if (isStorageSupport) {
+					localStorage.setItem("clientName", clientName.value);
+				}
+			}
+		});
+		
+		window.addEventListener("keydown", function (evt) {
+			if (evt.keyCode === 27) {
+				evt.preventDefault(); 
+				if (modal_overlay.classList.contains("show")) {
+					modal_overlay.classList.remove("show");
+					modal_window.classList.remove("modal-error");
+				}
+			}
+		});
+	</script>
 </body>
 </html>
 

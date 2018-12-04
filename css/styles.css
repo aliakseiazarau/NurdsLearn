@@ -35,6 +35,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 	margin: 0 auto;
 	padding: 0 20px;
 	position: relative;
+	z-index:1;
 }
 
 ul {
@@ -473,7 +474,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 .std-partners-logo {
-	padding: 46px 0 40px;
+	padding: 44px 0 44px;
 }
 
 .contacts {
@@ -481,6 +482,8 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-image: url('../img/bg-map.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
+	position: relative;
+	z-index: 3;
 }
 
 .contacts-info {
@@ -489,6 +492,16 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	min-width: 308px;
 	padding: 54px 50px 47px;
 	background-color: #ffffff;
+	z-index: 3;
+}
+
+iframe {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .contacts h4 {
@@ -498,7 +511,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 .contact-info-address {
-	margin-bottom: 16px;
+	margin-bottom: 19px;
 }
 
 .contact-info-phone {
@@ -720,7 +733,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .filter-slider {
 	text-transform: uppercase;
-	margin-bottom: 56px;
+	margin-bottom: 58px;
 }
 
 .filter-grid-type {
@@ -1106,7 +1119,7 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	box-shadow: inset 0 3px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info-btn {
+.contact-info-button {
 	width: 219px;
 }
 
@@ -1136,17 +1149,20 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 }
 
 	/* Модальное окно */
-										
-.modal {
+	
+.modal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0, 0);
-	z-index: 1;
+	background: rgba(0,0,0, 0.1);
+	z-index: 999;
+	display: none;
 }
-										
+
 .modal-window {
 	width: 960px;
 	position: absolute;
@@ -1155,12 +1171,27 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	transform: translate(-50%,-50%);
 	background: #fff;
 	opacity: 1;
-	z-index: 1;
+	z-index: 1000;
 	padding: 72px 100px 84px;
 	box-shadow: 0 20px 40px 0 rgba(0,1,1, 0.75);
 }
 
-.modal-header span::after {
+.modal-show {
+	display: block;
+	animation-name: bounce;
+	animation-duration: 0.5s;
+}
+
+.show {
+	display: block;
+}
+
+.modal-error {
+	animation-name: shake;
+	animation-duration: 0.6s;
+}
+
+.modal-close::after {
 	content: "";
 	position: absolute;
 	width: 21px;
@@ -1171,6 +1202,17 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	opacity: 0.3;
+}
+
+.modal-alert {
+	font-size: 16px;
+	line-height: 18px;
+	color: #fb565a;
+	display: none;
+}
+
+.modal-error .modal-alert {
+	display: block;
 }
 
 .modal-header {
@@ -1252,7 +1294,6 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .form-textarea textarea {
 	height: 118px;
-	
 	font-size: 16px;
 	line-height: 18px;
 	color: #444444;
@@ -1314,4 +1355,34 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	height: 50px;
 	border-width: 0;
 	font-weight: 500;
+}
+
+
+
+@keyframes bounce {
+	0% 	 { 
+		transform: translate(-50%,-2000px); 
+	}
+	70%  {  
+		transform: translate(-50%,-30px); 	
+	}
+	90%  { 
+		transform: translate(-50%,-10px); 	
+	}
+	100% { 
+		transform: translate(-50%,0); 	    
+	}
+}
+
+
+@keyframes shake {
+	0%, 100% { 
+		transform: translate(-50%, 0); 
+	}
+	10%, 30%, 50%, 70%, 90% { 
+		transform: translate(-50%,10px); 
+	}
+	20%, 40%, 60%, 80% { 
+		transform: translate(-50%,5px);  
+	}
 }
