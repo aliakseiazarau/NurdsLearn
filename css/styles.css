@@ -35,6 +35,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 	margin: 0 auto;
 	padding: 0 20px;
 	position: relative;
+	z-index:1;
 }
 
 ul {
@@ -478,9 +479,11 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .contacts {
 	padding: 54px 0;
-	background-image: url('../img/bg-map.jpg');
+	/* background-image: url('../img/bg-map.jpg'); */
 	background-size: 100%;
 	background-repeat: no-repeat;
+	position: relative;
+	z-index: 3;
 }
 
 .contacts-info {
@@ -489,6 +492,16 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	min-width: 308px;
 	padding: 54px 50px 47px;
 	background-color: #ffffff;
+	z-index: 3;
+}
+
+iframe {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .contacts h4 {
@@ -1137,7 +1150,6 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 	/* Модальное окно */
 	
-
 .modal-overlay {
 	position: fixed;
 	top: 0;
@@ -1146,16 +1158,9 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0, 0.2);
-	filter: blur(10px);
-	z-index: 1;
+	background: rgba(0,0,0, 0.1);
+	z-index: 999;
 	display: none;
-}
-
-.modal-show {
-	display: block;
-	animation-name: bounce;
-	animation-duration: 0.6s;
 }
 
 .modal-window {
@@ -1166,11 +1171,19 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	transform: translate(-50%,-50%);
 	background: #fff;
 	opacity: 1;
-	z-index: 2;
+	z-index: 1000;
 	padding: 72px 100px 84px;
 	box-shadow: 0 20px 40px 0 rgba(0,1,1, 0.75);
+}
+
+.modal-show {
+	display: block;
 	animation-name: bounce;
-	animation-duration: 0.6s;
+	animation-duration: 0.5s;
+}
+
+.show {
+	display: block;
 }
 
 .modal-error {
@@ -1189,6 +1202,17 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	opacity: 0.3;
+}
+
+.modal-alert {
+	font-size: 16px;
+	line-height: 18px;
+	color: #fb565a;
+	display: none;
+}
+
+.modal-error .modal-alert {
+	display: block;
 }
 
 .modal-header {
@@ -1270,7 +1294,6 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 .form-textarea textarea {
 	height: 118px;
-	
 	font-size: 16px;
 	line-height: 18px;
 	color: #444444;
@@ -1334,6 +1357,8 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	font-weight: 500;
 }
 
+
+
 @keyframes bounce {
 	0% 	 { 
 		transform: translate(-50%,-2000px); 
@@ -1352,12 +1377,12 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 
 @keyframes shake {
 	0%, 100% { 
-		transform: translate(50%, 0);    
+		transform: translate(-50%, 0); 
 	}
 	10%, 30%, 50%, 70%, 90% { 
-		transform: translate(50%,-10px); 
+		transform: translate(-50%,10px); 
 	}
 	20%, 40%, 60%, 80% { 
-		transform: translate(50%,10px);  
+		transform: translate(-50%,5px);  
 	}
 }
