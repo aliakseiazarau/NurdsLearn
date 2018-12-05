@@ -1,4 +1,4 @@
-var link = document.querySelector(".contact-info-button");
+var modal_open = document.querySelector(".contact-info-button");
 var modal_overlay = document.querySelector(".modal-overlay");
 var modal_window = document.querySelector(".modal-window");
 var close = document.querySelector(".modal-close");
@@ -10,13 +10,10 @@ var storage_email = localStorage.getItem("clientEmail");
 var modal_alert = document.querySelector(".modal-alert");
 
 
-link.addEventListener("click", function (evt) {
+modal_open.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	modal_overlay.classList.add("show");
-	modal_window.classList += " show modal-animation";
-	window.onscroll = function() {
-		return false;
-	}
+	modal_overlay.classList.add("show-modal");
+	modal_window.classList.add("modal-animation");
 	if (storage_name) {
 		clientName.value = storage_name;
 		clientEmail.focus();
@@ -27,7 +24,7 @@ link.addEventListener("click", function (evt) {
 
 close.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	modal_overlay.classList.remove("show");
+	modal_overlay.classList.remove("show-modal");
 	modal_window.classList.remove("modal-error");
 });
 		
@@ -47,9 +44,8 @@ form.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
 		evt.preventDefault(); 
-		if (modal_overlay.classList.contains("show")) {
-			modal_overlay.classList.remove("show");
-			modal_window.classList.remove("modal-error");
+		if (modal_overlay.classList.contains("show-modal")) {
+			modal_overlay.classList.remove("show-modal");
 		}
 	}
 });
