@@ -5,7 +5,6 @@ var close = document.querySelector(".modal-close");
 var form = modal_window.querySelector("form");
 var clientName = modal_window.querySelector("[name=name]");
 var clientEmail = modal_window.querySelector("[name=email]");
-var isStorageSupport = true;
 var storage_name = localStorage.getItem("clientName");
 var storage_email = localStorage.getItem("clientEmail");
 var modal_alert = document.querySelector(".modal-alert");
@@ -14,7 +13,7 @@ var modal_alert = document.querySelector(".modal-alert");
 link.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	modal_overlay.classList.add("show");
-	modal_window.classList.add("modal-show");
+	modal_window.classList += " show modal-animation";
 	window.onscroll = function() {
 		return false;
 	}
@@ -29,13 +28,14 @@ link.addEventListener("click", function (evt) {
 close.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	modal_overlay.classList.remove("show");
-	modal_overlay.classList.remove("modal-error");
 	modal_window.classList.remove("modal-error");
 });
 		
 form.addEventListener("submit", function (evt) {
 	if (!clientName.value || !clientEmail.value) {
 		evt.preventDefault();
+		modal_window.classList.remove("modal-error");
+		void modal_window.offsetWidth;
 		modal_window.classList.add("modal-error");
 	} else {
 		if (isStorageSupport) {

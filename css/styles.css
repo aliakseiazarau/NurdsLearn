@@ -1182,8 +1182,7 @@ iframe {
 	box-shadow: 0 20px 40px 0 rgba(0,1,1, 0.75);
 }
 
-.modal-show {
-	display: block;
+.modal-animation {
 	animation-name: bounce;
 	animation-duration: 0.5s;
 }
