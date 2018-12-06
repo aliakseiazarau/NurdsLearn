@@ -9,7 +9,6 @@ var storage_name = localStorage.getItem("clientName");
 var storage_email = localStorage.getItem("clientEmail");
 var modal_alert = document.querySelector(".modal-alert");
 
-
 modal_open.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	modal_overlay.classList.add("show-modal");
