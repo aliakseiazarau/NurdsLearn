@@ -285,7 +285,9 @@ input:checked:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::afte
 	display: block;
 }
 
-input:focus:nth-child(1) ~ .slider-controls .slider-control:nth-child(1)::after {
+input:focus:nth-child(1) ~ .slider-controls .slider-control:nth-child(1)::after,
+input:focus:nth-child(2) ~ .slider-controls .slider-control:nth-child(2)::after,
+input:focus:nth-child(3) ~ .slider-controls .slider-control:nth-child(3)::after {
 	display: block;
 	border: solid 4px #fb565a;
 	background: #fb565a;
