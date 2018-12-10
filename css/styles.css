@@ -295,7 +295,7 @@ input:checked:nth-child(3) ~ .slides .slide3 {
 	height: 18px;
 	margin: 0 6px;
 	border-radius: 50%;
-	background: #ffff;
+	background: #ffffff;
 	position: relative;
 	cursor: pointer;
 }
